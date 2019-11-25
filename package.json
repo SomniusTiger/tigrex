@@ -14,8 +14,26 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "9.1.4",
+    "next": "^9.1.4",
     "react": "16.12.0",
     "react-dom": "16.12.0"
+  },
+  "devDependencies": {
+    "@emotion/core": "^10.0.22",
+    "@types/next": "^9.0.0",
+    "@types/node": "^12.12.12",
+    "@types/react": "^16.9.13",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "@zeit/next-typescript": "^1.1.1",
+    "emotion-reset": "^2.0.3",
+    "eslint": "^6.7.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "typescript": "^3.7.2"
   }
 }
