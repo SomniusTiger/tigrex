@@ -1,10 +1,12 @@
 import React from 'react';
-
 import styled from '@emotion/styled';
 
+import { colors } from '../styles_shared/variables';
+
 const SigilSvgStyles = styled('svg')`
-  fill: #fff;
-  max-width: 80px;
+  fill: ${colors.grey_light};
+  max-width: 400px;
+  width: 100%;
 `;
 
 const Sigil = () => (
