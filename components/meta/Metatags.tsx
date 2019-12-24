@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 const Metatags = () => (
   <Head>
-    <title>Tigrex</title>
+    <title>Somnius</title>
 
     {/* Favicons */}
     <link rel="icon" href="/favicon.ico" />
