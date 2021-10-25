@@ -1,20 +1,15 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { Global, jsx, css } from '@emotion/react';
-import emotionReset from 'emotion-reset';
+import { jsx, css } from '@emotion/react';
 
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 
 import { sizes, colors } from '../components/styles_shared/variables';
 
-import Header from '../components/shared/Header';
 import Metatags from '../components/meta/Metatags';
+import React from 'react';
 
 const styles = {
-  background: css`
-    background-color: ${colors.grey_med_dark};
-    min-height: 100vh;
-  `,
   introduction: css`
     padding: ${sizes.unit * 4}px ${sizes.unit}px 0 ${sizes.unit}px;
     text-align: center;
@@ -26,40 +21,28 @@ const styles = {
     max-width: 600px;
     width: 100%;
   `,
-  tigerImage: css`
-    max-width: 600px;
-    width: 100%;
+  tigerImageWrapper: css`
+    background-color: ${colors.off_white};
+    border-radius: 50% 50%;
+    height: 40vmin;
+    margin: 0 auto;
+    width: 40vmin;
   `,
 };
 
-const Home: NextPage = () => {
-  return (
-    <div css={styles.background}>
-      <Global styles={css`
-        ${emotionReset}
+const Home: NextPage = () => (
+  <React.Fragment>
+    <Metatags />
 
-        html {
-          font-size: ${sizes.unit}px;
-          line-height: 2;
-        }
+    <section css={styles.introduction}>
+      <div css={styles.tigerImageWrapper}>
+        <img src="/images/somnius.svg" width="100%" alt="A small white tiger in a fancy outfit" />
+      </div>
+      <p css={styles.aboutText}>
+        Welcome. This is the digital home of Somnius. This is my personal wiki, where I can compile notes about both things I have made and other things I find it useful to share.
+      </p>
+    </section>
+  </React.Fragment>
+);
 
-        body {
-          background-color: #000;
-          color: #aaa;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        }
-      `} />
-      <Metatags />
-      <Header />
-
-      <section css={styles.introduction}>
-        <img css={styles.tigerImage} src="/images/somnius.svg" width="100%" alt="A small white tiger in a fancy outfit" />
-        <p css={styles.aboutText}>
-          Welcome. This is the digital home of Somnius. This is my personal wiki, where I can compile notes about both things I have made and other things I find it useful to share.
-        </p>
-      </section>
-    </div>
-  )
-}
-
-export default Home
+export default Home;
