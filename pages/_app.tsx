@@ -6,9 +6,9 @@ import type { AppProps } from 'next/app';
 import { Global, jsx, css } from '@emotion/react';
 import emotionReset from 'emotion-reset';
 
-import Header from '../components/shared/Header';
+import Header from 'components/shared/Header';
 
-import { sizes, colors } from '../components/styles_shared/variables';
+import { sizes, colors } from 'components/styles_shared/variables';
 
 const styles = {
   background: css`

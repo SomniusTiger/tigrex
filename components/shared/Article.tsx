@@ -4,10 +4,10 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import Metatags from '../meta/Metatags';
+import Metatags from 'components/meta/Metatags';
 
 import { jsx, css } from '@emotion/react';
-import { sizes, colors } from '../../components/styles_shared/variables';
+import { sizes, colors } from 'components/styles_shared/variables';
 
 const styles = {
   articleStyles: css`

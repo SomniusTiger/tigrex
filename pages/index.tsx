@@ -5,9 +5,9 @@ import { jsx, css } from '@emotion/react';
 import Image from 'next/image';
 import type { NextPage } from 'next';
 
-import { sizes, colors } from '../components/styles_shared/variables';
+import { sizes, colors } from 'components/styles_shared/variables';
 
-import Metatags from '../components/meta/Metatags';
+import Metatags from 'components/meta/Metatags';
 import React from 'react';
 
 const styles = {
