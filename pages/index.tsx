@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react';
 
+import Image from 'next/image';
 import type { NextPage } from 'next';
 
 import { sizes, colors } from '../components/styles_shared/variables';
@@ -16,7 +17,7 @@ const styles = {
   `,
   aboutText: css`
     font-size: 1.5em;
-    line-height: 1.3;
+    line-height: 1.4;
     margin: ${sizes.unit * 3}px auto 0;
     max-width: 600px;
     width: 100%;
@@ -26,6 +27,7 @@ const styles = {
     border-radius: 50% 50%;
     height: 40vmin;
     margin: 0 auto;
+    position: relative;
     width: 40vmin;
   `,
 };
@@ -36,7 +38,7 @@ const Home: NextPage = () => (
 
     <section css={styles.introduction}>
       <div css={styles.tigerImageWrapper}>
-        <img src="/images/somnius.svg" width="100%" alt="A small white tiger in a fancy outfit" />
+        <Image src="/images/somnius.svg" layout="fill" alt="A small white tiger in a fancy outfit" />
       </div>
       <p css={styles.aboutText}>
         Welcome. This is the digital home of Somnius. This is my personal wiki, where I can compile notes about both things I have made and other things I find it useful to share.

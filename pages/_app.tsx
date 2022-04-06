@@ -12,7 +12,7 @@ import { sizes, colors } from '../components/styles_shared/variables';
 
 const styles = {
   background: css`
-    background-color: ${colors.grey_med_dark};
+    background-color: ${colors.grey_darker};
     min-height: 100vh;
   `,
 }
@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       body {
         background-color: #000;
-        color: #aaa;
+        color: #ccc;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
       }
     `} />

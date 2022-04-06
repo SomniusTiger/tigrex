@@ -1,5 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+import Link from 'next/link';
+
 import { jsx, css } from '@emotion/react';
 import { colors, sizes } from '../styles_shared/variables';
 
@@ -17,16 +19,16 @@ const styles = {
     margin-left: ${sizes.unit}px;
   `,
   homeLink: css`
-  color: ${colors.white};
-  text-decoration: none;
-`,
+    color: ${colors.white};
+    text-decoration: none;
+  `,
 };
 
 const Header = () => (
   <section className="rc-Header" css={styles.headerWrapper}>
-    <h2 css={styles.headerText}>
-      <a css={styles.homeLink} href="/">Somnius</a>
-    </h2>
+    <div css={styles.headerText}>
+      <Link passHref={true} href="/"><span css={styles.homeLink}>Somnius</span></Link>
+    </div>
   </section>
 );
 
