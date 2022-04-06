@@ -5,6 +5,8 @@ const Metatags = () => (
   <Head>
     <title>Somnius</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
     {/* Favicons */}
     <link rel="icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />

@@ -22,6 +22,8 @@ A table:
 | a | b | c |
 | - | - | - |
 | first | second | third |
+| first | second | third |
+| first | second | third |
 
 If this works, we should see this markdown content on the page just fine.
 `;

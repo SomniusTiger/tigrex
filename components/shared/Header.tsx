@@ -10,7 +10,7 @@ const styles = {
     align-items: center;
     background-color: ${colors.grey_dark};
     display: flex;
-    height: ${sizes.unit * 3}px;
+    height: ${sizes.unit * 5}px;
     padding: ${sizes.unit}px;
   `,
   headerText: css`

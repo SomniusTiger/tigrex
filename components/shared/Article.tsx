@@ -10,6 +10,9 @@ import { jsx, css } from '@emotion/react';
 import { sizes, colors } from 'components/styles_shared/variables';
 
 const styles = {
+  articleWrapper: css`
+    width: 100%;
+  `,
   articleStyles: css`
     line-height: 1.4;
     margin: ${sizes.unit * 2}px auto 0;
@@ -60,8 +63,35 @@ const styles = {
       font-weight: normal;
     }
 
-    p {
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 3em;
+      }
+
+      h2 {
+        font-size: 2.5em;
+      }
+
+      h3 {
+        font-size: 2.25em;
+      }
+
+      h4 {
+        font-size: 2em;
+      }
+
+      h5 {
+        font-size: 1.75em;
+      }
+    }
+
+    p, ol, ul, table {
       font-size: 1.5em;
+    }
+
+    input[type="checkbox"] {
+      height: 1.5em;
+      width: 1.5em;
     }
 
     em {
@@ -73,9 +103,15 @@ const styles = {
     }
 
     blockquote {
+      border-bottom: solid 1px ${colors.grey_med_dark};
       border-left: solid 6px ${colors.grey_bright};
+      border-right: solid 1px ${colors.grey_med_dark};
+      border-top: solid 1px ${colors.grey_med_dark};
+
       margin: ${sizes.unit}px 0 ${sizes.unit}px;
+      max-width: 100%;
       padding: ${sizes.unit * 0.5}px ${sizes.unit * 2}px;
+      width: max-content;
     }
 
     a {
@@ -100,15 +136,41 @@ const styles = {
     }
 
     ul {
+      list-style-type: circle;
+      margin: ${sizes.unit * 0.5}px 0 ${sizes.unit * 0.5}px ${sizes.unit * 3}px;
 
     }
 
     ol {
+      list-style-type: decimal;
+      margin: ${sizes.unit * 0.5}px 0 ${sizes.unit * 0.5}px ${sizes.unit * 3}px;
+    }
 
+    li {
+      line-height: 1.8;
     }
 
     table {
-      
+      margin: ${sizes.unit * 1.5}px 0;
+      max-width: 100%;
+      overflow: auto;
+      width: max-content;
+
+      tr {
+        &:nth-of-type(2n) {
+          background-color: ${colors.grey_dark};
+        }
+      }
+
+      th {
+        font-weight: bold;
+      }
+
+      th, td {
+        border: solid 1px ${colors.grey_medium};
+        color: ${colors.white};
+        padding: ${sizes.unit* 0.75}px ${sizes.unit * 1.5}px;
+      }
     }
   `,
 };
@@ -118,7 +180,7 @@ type Props = {
 }
 
 const Article = ({ content }: Props) => (
-  <div className="rc-Article">
+  <div className="rc-Article" css={styles.articleWrapper}>
     <Metatags />
     <section css={styles.articleStyles}>
       <ReactMarkdown remarkPlugins={[remarkGfm]}>

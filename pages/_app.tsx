@@ -23,6 +23,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Global styles={css`
       ${emotionReset}
 
+      * {
+        box-sizing: border-box;
+      }
+
       html {
         font-size: ${sizes.unit}px;
         line-height: 2;
